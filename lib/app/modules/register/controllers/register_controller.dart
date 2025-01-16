@@ -19,7 +19,12 @@ class RegisterController extends GetxController {
       'email': emailController.text,
       'password': passwordController.text,
       'password_confirmation': passwordConfirmationController.text,
-    });
+    },
+    headers: {
+      'Content-Type' : 'application/json',
+      'Accept' : 'application/json',
+    },
+    );
 
     if (response.statusCode == 201) {
       authToken.write('token', response.body['token']);

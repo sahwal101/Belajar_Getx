@@ -2,27 +2,21 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-class ProfileView extends GetView {
-  const ProfileView({super.key});
+class EditView extends GetView {
+  const EditView({super.key, required title, required id});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ProfileView'),
+        title: const Text('EditView'),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          'ProfileView is working',
+          'EditView is working',
           style: TextStyle(fontSize: 20),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-  onPressed: () {
-	  // logic logout
-  },
-  child: const Icon(Icons.logout),
-    ),
     );
   }
 }
